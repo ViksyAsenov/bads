@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Fads",
+  "author": "Viksy",
+  "version": "1.0.0",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Fads"
+  }
+}

@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-width: 250px;
+    min-height: 125px;
+}
+
+h1 {
+    color: #282828;
+}
+
+p {
+    color: #282828;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #282828
+}
