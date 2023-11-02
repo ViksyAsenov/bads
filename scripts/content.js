@@ -1,13 +1,14 @@
 const blockingAds = () => {
-  const ads = document.querySelectorAll('.ad-showing')
-  if (ads.length === 0) return
-
+  const ad = document.querySelector('.ad-showing')
   const video = document.querySelector('video')
-  video.currentTime = Number.MAX_VALUE
 
-  const buttons = document.querySelectorAll('ytp-ad-skip-button ytp-button')
-  for (const button of buttons) {
-    if (button) button.click()
+  if (ad && video) {
+    video.currentTime = Number.MAX_VALUE
+
+    setTimeout(() => {
+      const skipButton = document.querySelector('.ytp-ad-skip-button')
+      if (skipButton) skipButton.click()
+    }, 250)
   }
 }
 
