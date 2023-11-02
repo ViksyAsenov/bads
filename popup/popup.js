@@ -2,9 +2,7 @@ const blockingStatus = document.getElementById('blocking-status')
 const startButton = document.getElementById('start-btn')
 const stopButton = document.getElementById('stop-btn')
 
-const setIsActive = (isActive) => {
-  return { isActive }
-}
+const setIsActive = (isActive) => ({ isActive })
 
 const toggleTextAndButton = async () => {
   const { isActive } = await chrome.storage.local.get('isActive')
@@ -22,24 +20,25 @@ const toggleTextAndButton = async () => {
 }
 toggleTextAndButton()
 
-startButton.addEventListener('click', () => {
+const sendMessageToTabs = (isActive) => {
   chrome.tabs.query({}, (tabs) => {
     tabs.forEach((tab) => {
-      chrome.tabs.sendMessage(tab.id, setIsActive(true))
+      chrome.tabs.sendMessage(tab.id, setIsActive(isActive))
     })
   })
+}
 
+const handleStartClick = async () => {
   chrome.storage.local.set({ isActive: true })
+  sendMessageToTabs(true)
   toggleTextAndButton()
-})
+}
 
-stopButton.addEventListener('click', () => {
-  chrome.tabs.query({}, (tabs) => {
-    tabs.forEach((tab) => {
-      chrome.tabs.sendMessage(tab.id, setIsActive(false))
-    })
-  })
-
+const handleStopClick = async () => {
   chrome.storage.local.set({ isActive: false })
+  sendMessageToTabs(false)
   toggleTextAndButton()
-})
+}
+
+startButton.addEventListener('click', handleStartClick)
+stopButton.addEventListener('click', handleStopClick)

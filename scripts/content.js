@@ -21,17 +21,22 @@ const stopBlocking = () => {
   clearInterval(interval)
 }
 
-;(async function checkIsActive() {
-  const { isActive } = await chrome.storage.local.get('isActive')
+const initializeBlocking = async () => {
+  try {
+    const { isActive } = await chrome.storage.local.get('isActive')
 
-  if (isActive) {
-    startBlocking()
-    console.log('Blocking from start')
-  } else {
-    stopBlocking()
-    console.log('Not blocking from start')
+    if (isActive) {
+      startBlocking()
+      console.log('Blocking from start')
+    } else {
+      stopBlocking()
+      console.log('Not blocking from start')
+    }
+  } catch (error) {
+    console.error('Error initializing blocking:', error)
   }
-})()
+}
+initializeBlocking()
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   console.log('Message received in content script:', request)
