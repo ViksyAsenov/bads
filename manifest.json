@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Fads",
+  "name": "Bads",
   "author": "Viksy",
   "version": "1.0.0",
   "permissions": [
@@ -16,6 +16,6 @@
   ],
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "Fads"
+    "default_title": "Bads"
   }
 }
