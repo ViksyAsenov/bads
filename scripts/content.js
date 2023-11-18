@@ -5,10 +5,10 @@ const blockingAds = () => {
   if (ad && video) {
     video.currentTime = Number.MAX_VALUE
 
-    setTimeout(() => {
-      const skipButton = document.querySelector('.ytp-ad-skip-button')
-      if (skipButton) skipButton.click()
-    }, 250)
+    setInterval(() => {
+      const skipButtons = document.querySelectorAll('.ytp-ad-skip-button-modern')
+      skipButtons.forEach((button) => button.click())
+    }, 150)
   }
 }
 
