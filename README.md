@@ -1,6 +1,6 @@
 # Bads (Bad Ads) - Ad skipping made easy for YouTube
 
-Tired of YouTube ads interrupting your viewing experience? Fads is the solution you've been waiting for! My user-friendly Chrome extension makes ad skipping effortless. Enjoy uninterrupted content with just a few clicks.
+Tired of YouTube ads interrupting your viewing experience? Bads is the solution you've been waiting for! My user-friendly Chrome extension makes ad skipping effortless. Enjoy uninterrupted content with just a few clicks.
 
 ## Installation
 
