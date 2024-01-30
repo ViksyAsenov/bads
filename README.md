@@ -8,7 +8,7 @@ To add the Bads Chrome extension to your Browser, follow these steps:
 
 1. **Clone the Repository:**
    - Open your terminal.
-   - Navigate to the directory where you want to add the Fads Chrome extension.
+   - Navigate to the directory where you want to add the Bads Chrome extension.
    - Run the following command to clone the repository:
      ```
      git clone https://github.com/ViksyAsenov/bads
