@@ -1,6 +1,6 @@
 # Bads (Bad Ads) - Ad skipping made easy for YouTube
 
-Tired of YouTube ads interrupting your viewing experience? Bads is the solution you've been waiting for! My user-friendly Chrome extension makes ad skipping effortless. Enjoy uninterrupted content with just a few clicks.
+Tired of YouTube ads interrupting your viewing experience? Bads is the solution you've been waiting for! My user-friendly Chrome extension makes ad skipping effortless. Enjoy uninterrupted content with just a few clicks while still allowing creators to earn revenue.
 
 ## Installation
 
@@ -31,4 +31,4 @@ To add the Bads Chrome extension to your Browser, follow these steps:
 
 ## Usage
 
-- The Bads extension works automatically to skip ads on YouTube videos.
+- The Bads extension automatically skips ads on YouTube videos by fast-forwarding to the end of the ad and clicking the skip button. This enables creators to earn revenue as if the ad was watched in full, while users are spared from viewing the ad content.
